@@ -7,8 +7,8 @@ class ExamScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: ExamScreenBody(),
+    return const SafeArea(
+      child: ExamScreenBody(),
     );
   }
 }

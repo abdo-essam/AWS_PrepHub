@@ -11,7 +11,7 @@ class CertificationItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.of(context).pushNamed(Routes.examScreem);
+        Navigator.of(context).pushNamed(Routes.examScreen);
       },
       child: Container(
         height: 140.h,
