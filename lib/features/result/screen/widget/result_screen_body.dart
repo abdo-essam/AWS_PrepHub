@@ -4,11 +4,33 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 
-class ResultScreenBody extends StatelessWidget {
+class ResultScreenBody extends StatefulWidget {
   const ResultScreenBody({super.key});
 
   @override
+  State<ResultScreenBody> createState() => _ResultScreenBodyState();
+}
+
+class _ResultScreenBodyState extends State<ResultScreenBody> {
+  late final Map<String, dynamic> args;
+  late final int score;
+  late final int endIndex;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    final Map<String, dynamic> args =
+        ModalRoute.of(context)?.settings.arguments as Map<String, dynamic>;
+    score = args['score'];
+    endIndex = args['endIndex'];
+  }
+
+  @override
   Widget build(BuildContext context) {
+    double percentage = endIndex < 0
+        ? (score / (endIndex + 2)) * 100
+        : (score / (endIndex + 1)) * 100;
+
     return Scaffold(
       backgroundColor: Colors.black,
       body: Container(
@@ -23,7 +45,7 @@ class ResultScreenBody extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(24),
               child: Text(
-                '1 out of 10 are correct',
+                '$score out of 10 are correct',
                 style: GoogleFonts.quicksand(
                   textStyle: TextStyle(
                       color: Colors.white,
@@ -32,13 +54,12 @@ class ResultScreenBody extends StatelessWidget {
                 ),
               ),
             ),
-
             CircularPercentIndicator(
               radius: 85.0,
               lineWidth: 10.0,
-              percent: 80.0 / 100,
+              percent: percentage / 100,
               center: Text(
-                "80%",
+                "${percentage.toInt()}%",
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 18.sp,
@@ -59,7 +80,7 @@ class ResultScreenBody extends StatelessWidget {
               ),
             ),
             Text(
-              'You have got 1 Points',
+              'You have got $score Points',
               style: GoogleFonts.quicksand(
                 textStyle: TextStyle(
                   color: Colors.white,
@@ -84,7 +105,6 @@ class ResultScreenBody extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-
                 Expanded(
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
@@ -133,7 +153,7 @@ class ResultScreenBody extends StatelessWidget {
                       Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => HomeScreen(),
+                          builder: (context) => const HomeScreen(),
                         ),
                       );
                     },

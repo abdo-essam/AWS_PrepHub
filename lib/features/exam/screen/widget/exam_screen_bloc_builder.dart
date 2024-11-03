@@ -15,8 +15,10 @@ class ExamScreenBlocBuilder extends StatelessWidget {
     return BlocBuilder<ExamCubit, ExamState>(
       builder: (context, state) {
         if (state is ExamLoading) {
-          return const CircularProgressIndicator(
-            color: Colors.deepOrange,
+          return const Center(
+            child: CircularProgressIndicator(
+              color: Colors.deepOrange,
+            ),
           );
         }
         if (state is ExamGetAllQuestions) {

@@ -9,6 +9,8 @@ import '../../features/result/screen/ui/result_screen.dart';
 
 class AppRouting {
   Route? generateRoutes(RouteSettings routeSettings) {
+    final arguments = routeSettings.arguments;
+
     switch (routeSettings.name) {
       case Routes.homeScreen:
         return MaterialPageRoute(builder: (_) => const HomeScreen());
@@ -20,7 +22,13 @@ class AppRouting {
                 ));
 
       case Routes.resultScreen:
-        return MaterialPageRoute(builder: (_) => const ResultScreen(index: 0, score: 0,));
+        return MaterialPageRoute(
+          builder: (_) => const ResultScreen(
+            index: 0,
+            score: 0,
+          ),
+          settings: RouteSettings(arguments: arguments),
+        );
 
       default:
         return MaterialPageRoute(

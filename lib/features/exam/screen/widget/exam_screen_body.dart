@@ -128,7 +128,7 @@ class _ExamScreenBodyState extends State<ExamScreenBody> {
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     elevation: 0.0,
-                    backgroundColor: Colors.deepOrange,
+                    backgroundColor: Theme.of(context).primaryColor,
                     padding: const EdgeInsets.symmetric(
                         horizontal: 10.0, vertical: 19),
                     shape: RoundedRectangleBorder(
@@ -155,7 +155,7 @@ class _ExamScreenBodyState extends State<ExamScreenBody> {
                     child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     elevation: 0.0,
-                    backgroundColor: Colors.deepOrange,
+                    backgroundColor: Theme.of(context).primaryColor,
                     padding: const EdgeInsets.symmetric(
                         horizontal: 10.0, vertical: 17),
                     shape: RoundedRectangleBorder(
