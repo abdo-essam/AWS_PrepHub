@@ -1,14 +1,43 @@
+import 'package:awsprephub/features/exam/manager/exam_cubit.dart';
 import 'package:awsprephub/features/exam/screen/widget/answer_button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../../core/functions/show_back_alert_dialog.dart';
+import '../../../../core/models/questions.dart';
 import '../../../../core/routes/routes.dart';
 import 'count_down.dart';
 
-class ExamScreenBody extends StatelessWidget {
-  const ExamScreenBody({super.key});
+class ExamScreenBody extends StatefulWidget {
+  const ExamScreenBody({super.key, required this.questions});
+
+  final List<Question> questions;
+
+  @override
+  State<ExamScreenBody> createState() => _ExamScreenBodyState();
+}
+
+class _ExamScreenBodyState extends State<ExamScreenBody> {
+
+
+  @override
+  void initState() {
+    super.initState();
+    context.read<ExamCubit>().index = 0;
+  }
+
+  void navOnTimeOut() {
+    Navigator.of(context).pushNamed(Routes.resultScreen);
+/*    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(
+        builder: (context) => ResultScreen(
+            index: context.read<ExamCubit>().index - 1, score: score),
+      ),
+    );*/
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +54,7 @@ class ExamScreenBody extends StatelessWidget {
                 children: [
                   const CountDown(),
                   Text(
-                    'Q.1/65',
+                    'Q.${context.read<ExamCubit>().index+1}/${widget.questions.length}',
                     style: GoogleFonts.quicksand(
                       textStyle: TextStyle(
                         fontSize: 14.sp,
@@ -50,7 +79,8 @@ class ExamScreenBody extends StatelessWidget {
 
                   // the question
                   Text(
-                    "What is the best programming language?",
+                    widget.questions[context.read<ExamCubit>().index]
+                        .questionText,
                     style: GoogleFonts.quicksand(
                       textStyle: TextStyle(
                         fontSize: 14.sp,
@@ -62,10 +92,18 @@ class ExamScreenBody extends StatelessWidget {
                   SizedBox(
                     height: 20.h,
                   ),
-                  const AnswerButton(),
-                  const AnswerButton(),
-                  const AnswerButton(),
-                  const AnswerButton()
+
+                  // for loop to display the options
+                  for (int i = 0;
+                      i <
+                          widget.questions[context.read<ExamCubit>().index]
+                              .options.length;
+                      i++)
+                    AnswerButton(
+                      question:
+                          widget.questions[context.read<ExamCubit>().index],
+                      optionIndex: i,
+                    ),
                 ],
               ),
             ),

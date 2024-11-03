@@ -19,7 +19,7 @@ class CertificationItem extends StatelessWidget {
         margin: const EdgeInsets.symmetric(vertical: 10),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
-          color: Colors.black,
+          color: Colors.white,
         ),
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
         child: Column(
@@ -42,7 +42,7 @@ class CertificationItem extends StatelessWidget {
                       style: GoogleFonts.quicksand(
                         fontSize: 18.sp,
                         fontWeight: FontWeight.w600,
-                        color: Colors.white,
+                        color: Colors.black,
                       ),
                     ),
                     SizedBox(height: 10.h),
@@ -51,7 +51,7 @@ class CertificationItem extends StatelessWidget {
                       style: GoogleFonts.quicksand(
                         fontSize: 14.sp,
                         fontWeight: FontWeight.w500,
-                        color: Colors.white,
+                        color: Colors.black,
                       ),
                     ),
                   ],
@@ -69,7 +69,7 @@ class CertificationItem extends StatelessWidget {
                   SizedBox(width: 10.w),
                   Text(
                     "60 questions",
-                    style: GoogleFonts.quicksand(fontSize: 13.sp , color: Colors.white),
+                    style: GoogleFonts.quicksand(fontSize: 13.sp , color: Colors.black),
                   ),
                   SizedBox(width: 10.w),
                   const Icon(Icons.timer_outlined,
@@ -77,7 +77,7 @@ class CertificationItem extends StatelessWidget {
                   SizedBox(width: 10.w),
                   Text(
                     "120 mins",
-                    style: GoogleFonts.quicksand(fontSize: 13 , color: Colors.white),
+                    style: GoogleFonts.quicksand(fontSize: 13 , color: Colors.black),
                   ),
                 ],
               ),

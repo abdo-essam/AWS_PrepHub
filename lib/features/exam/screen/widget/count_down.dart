@@ -35,7 +35,7 @@ class CountDown extends StatelessWidget {
             ),
             endTime: DateTime.now().add(
               const Duration(
-                minutes: 1,
+                minutes: 5,
                 seconds: 0,
               ),
             ),

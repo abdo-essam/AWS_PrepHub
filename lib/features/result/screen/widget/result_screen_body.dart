@@ -100,7 +100,7 @@ class ResultScreenBody extends StatelessWidget {
                       Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const HomeScreen(),
+                          builder: (context) => HomeScreen(),
                         ),
                       );
                     },
@@ -133,7 +133,7 @@ class ResultScreenBody extends StatelessWidget {
                       Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const HomeScreen(),
+                          builder: (context) => HomeScreen(),
                         ),
                       );
                     },

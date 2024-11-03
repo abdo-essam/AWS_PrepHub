@@ -1,3 +1,4 @@
+import 'package:awsprephub/features/exam/screen/widget/exam_screen_bloc_builder.dart';
 import 'package:flutter/material.dart';
 
 import '../widget/exam_screen_body.dart';
@@ -8,7 +9,7 @@ class ExamScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const SafeArea(
-      child: ExamScreenBody(),
+      child: ExamScreenBlocBuilder(),
     );
   }
 }

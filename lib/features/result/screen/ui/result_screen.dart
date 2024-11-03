@@ -7,7 +7,7 @@ import '../widget/result_screen_body.dart';
 
 
 class ResultScreen extends StatelessWidget {
-  const ResultScreen({super.key});
+  const ResultScreen({super.key, required int index, required int score});
 
   @override
   Widget build(BuildContext context) {

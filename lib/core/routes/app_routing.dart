@@ -1,5 +1,7 @@
 import 'package:awsprephub/core/routes/routes.dart';
+import 'package:awsprephub/features/exam/manager/exam_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../features/exam/screen/ui/exam_screen.dart';
 import '../../features/home/screen/ui/home_screen.dart';
@@ -11,10 +13,14 @@ class AppRouting {
       case Routes.homeScreen:
         return MaterialPageRoute(builder: (_) => const HomeScreen());
       case Routes.examScreen:
-        return MaterialPageRoute(builder: (_) => const ExamScreen());
+        return MaterialPageRoute(
+            builder: (_) => BlocProvider(
+                  create: (context) => ExamCubit()..getQuestions(),
+                  child: const ExamScreen(),
+                ));
 
       case Routes.resultScreen:
-        return MaterialPageRoute(builder: (_) => const ResultScreen());
+        return MaterialPageRoute(builder: (_) => const ResultScreen(index: 0, score: 0,));
 
       default:
         return MaterialPageRoute(

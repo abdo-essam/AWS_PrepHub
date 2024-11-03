@@ -7,60 +7,67 @@ import 'certification_item/certification_item_list_view.dart';
 class HomeScreenBody extends StatelessWidget {
   const HomeScreenBody({super.key});
 
+
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-        child: Padding(
-      padding: const EdgeInsets.all(24.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              const Icon(
-                Icons.waving_hand_outlined,
-                color: Colors.black,
-                size: 15,
-              ),
-              SizedBox(
-                width: 10.w,
-              ),
-              Text(
-                'Hello, Welcome to AWS PrepHub',
-                style: GoogleFonts.quicksand(
-                  fontSize: 16.0.sp,
-                  color: Colors.black,
+    return Container(
+      color: Colors.black,
+      child: SafeArea(
+          child: Padding(
+        padding: const EdgeInsets.all(24.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                const Icon(
+                  Icons.waving_hand_outlined,
+                  color: Colors.white,
+                  size: 15,
                 ),
-              ),
-            ],
-          ),
-          SizedBox(
-            height: 20.h,
-          ),
-          Row(
-            children: [
-              Text(
-                "Please Select A Path",
-                style: GoogleFonts.quicksand(
+                SizedBox(
+                  width: 10.w,
+                ),
+                Text(
+                  'Hello, Welcome to AWS PrepHub',
+                  style: GoogleFonts.quicksand(
                     fontSize: 16.0.sp,
-                    color: Colors.black,
-                    fontWeight: FontWeight.w600),
-              ),
-              SizedBox(
-                width: 15.w,
-              ),
-              const Icon(
-                Icons.arrow_circle_right_outlined,
-                color: Colors.black,
-                size: 22,
-              )
-            ],
-          ),
-          const SingleChildScrollView(
-            child: CertificationItemListView(),
-          ),
-        ],
-      ),
-    ));
+                    color: Colors.white,
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 20.h,
+            ),
+            Row(
+              children: [
+                Text(
+                  "Please Select A Path",
+                  style: GoogleFonts.quicksand(
+                      fontSize: 16.0.sp,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w600),
+                ),
+                SizedBox(
+                  width: 15.w,
+                ),
+                const Icon(
+                  Icons.arrow_circle_right_outlined,
+                  color: Colors.white,
+                  size: 22,
+                )
+              ],
+            ),
+            SizedBox(
+              height: 10.h,
+            ),
+            const SingleChildScrollView(
+              child: CertificationItemListView(),
+            ),
+          ],
+        ),
+      )),
+    );
   }
 }
