@@ -38,6 +38,7 @@ dependencies:
   flutter_screenutil: ^5.5.3
   google_fonts: ^6.2.1
   flutter_timer_countdown: ^1.0.5
+  percent_indicator: ^4.2.3
 
 dev_dependencies:
   flutter_test:
