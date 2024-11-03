@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'certification_item/certification_item_list_view.dart';
+
 class HomeScreenBody extends StatelessWidget {
   const HomeScreenBody({super.key});
 
@@ -38,7 +40,7 @@ class HomeScreenBody extends StatelessWidget {
           Row(
             children: [
               Text(
-                "Please Select A Category",
+                "Please Select A Path",
                 style: GoogleFonts.quicksand(
                     fontSize: 16.0.sp,
                     color: Colors.black,
@@ -54,17 +56,9 @@ class HomeScreenBody extends StatelessWidget {
               )
             ],
           ),
-          Container(
-            decoration: const BoxDecoration(
-              color: Color(0xFFFF8337),
-              borderRadius: BorderRadius.vertical(
-                top: Radius.circular(25),
-              ),
-            ),
-            child: SingleChildScrollView(
-
-            ),
-          )
+          const SingleChildScrollView(
+            child: CertificationItemListView(),
+          ),
         ],
       ),
     ));
