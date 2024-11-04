@@ -28,3 +28,5 @@ class ExamGetAllQuestions extends ExamState {
 
   ExamGetAllQuestions({required this.questions});
 }
+
+class ExamChangeOptionButtonColor extends ExamState {}

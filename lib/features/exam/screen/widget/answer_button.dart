@@ -17,16 +17,17 @@ class AnswerButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Color color = Colors.deepOrange;
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 5),
       child: ElevatedButton(
         onPressed: () {
-/*          if(question.answerIndex == index){
-            color = Colors.green;
-          }else{
-            color = Colors.red;
-          }*/
+/*
+          if (question.answerIndex == optionIndex) {
+            context.read<ExamCubit>().changeOptionButtonColor(Colors.green);
+          } else {
+            context.read<ExamCubit>().changeOptionButtonColor(Colors.red);
+          }
+*/
 
           // check if the answer is correct
           if (question.answerIndex == optionIndex) {
@@ -36,22 +37,21 @@ class AnswerButton extends StatelessWidget {
           // check if it is the last question
           if (context.read<ExamCubit>().index ==
               context.read<ExamCubit>().questions.length - 1) {
-            Navigator.of(context).popAndPushNamed(Routes.resultScreen, arguments: {
+            Navigator.of(context)
+                .popAndPushNamed(Routes.resultScreen, arguments: {
               'score': context.read<ExamCubit>().score,
               'endIndex': context.read<ExamCubit>().index,
             });
           }
 
           // go to next question
-          context
-              .read<ExamCubit>()
-              .updateIndex(context.read<ExamCubit>().index);
+          context.read<ExamCubit>().updateIndex();
         },
         style: ButtonStyle(
             elevation: const WidgetStatePropertyAll(0),
             padding: const WidgetStatePropertyAll(
                 EdgeInsets.symmetric(vertical: 25, horizontal: 15)),
-            backgroundColor: getColor(Colors.white, color),
+            backgroundColor: getColor(Colors.white, Colors.deepOrange),
             foregroundColor: getColor(Colors.black, Colors.white),
             shape: WidgetStateProperty.all(RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10.0),

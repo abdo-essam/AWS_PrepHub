@@ -52,8 +52,13 @@ class _ExamScreenBodyState extends State<ExamScreenBody> {
                   CountDown(
                     quizTime: 1,
                     timeOut: () {
-                      // if time out then the reminder questions will be incorrect and make the index equal to the last question to calculating the score for overall
-                      context.read<ExamCubit>().index = widget.questions.length;
+                      // if time out then the reminder questions will be incorrect
+                      // then make the index equal to the last question to calculating the score for overall
+
+                      if (context.read<ExamCubit>().index != 0) {
+                        context.read<ExamCubit>().index =
+                            widget.questions.length - 1;
+                      }
                       navToResult();
                     },
                   ),
@@ -81,17 +86,17 @@ class _ExamScreenBodyState extends State<ExamScreenBody> {
                     height: 20.h,
                   ),
 
-                    Text(
-                      widget.questions[context.read<ExamCubit>().index]
-                          .questionText,
-                      style: GoogleFonts.quicksand(
-                        textStyle: TextStyle(
-                          fontSize: 14.sp,
-                          color: Colors.white,
-                          fontWeight: FontWeight.w600,
-                        ),
+                  Text(
+                    widget.questions[context.read<ExamCubit>().index]
+                        .questionText,
+                    style: GoogleFonts.quicksand(
+                      textStyle: TextStyle(
+                        fontSize: 14.sp,
+                        color: Colors.white,
+                        fontWeight: FontWeight.w600,
                       ),
                     ),
+                  ),
                   SizedBox(
                     height: 20.h,
                   ),

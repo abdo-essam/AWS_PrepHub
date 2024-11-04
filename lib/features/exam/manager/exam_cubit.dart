@@ -1,5 +1,6 @@
 import 'package:awsprephub/core/helper/local_database/app_database.dart';
 import 'package:awsprephub/core/models/questions.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'exam_state.dart';
@@ -10,6 +11,7 @@ class ExamCubit extends Cubit<ExamState> {
   static ExamCubit get(context) => BlocProvider.of<ExamCubit>(context);
   int index = 0;
   int score = 0;
+  Color optionButtonColor = Colors.red;
   List<Question> questions = [];
 
   Future<void> getQuestionsFromDatabase() async {
@@ -26,13 +28,18 @@ class ExamCubit extends Cubit<ExamState> {
     }
   }
 
-  updateIndex(int currentIndex) async {
-    if (currentIndex < questions.length - 1) {
-      index = currentIndex + 1;
+  updateIndex() async {
+    if (index < questions.length - 1) {
+      index++;
       emit(ExamQuestionIndexUpdated(questions: questions));
     } else {
       emit(ExamQuestionLastIndexUpdated());
     }
+  }
+
+  changeOptionButtonColor(Color color) {
+    optionButtonColor = color;
+    emit(ExamChangeOptionButtonColor());
   }
 
   increaseScore() {
