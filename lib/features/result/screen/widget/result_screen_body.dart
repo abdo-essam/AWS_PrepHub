@@ -4,6 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 
+import '../../../review_question/screen/ui/review_question_screen.dart';
+
 class ResultScreenBody extends StatefulWidget {
   const ResultScreenBody({super.key});
 
@@ -156,7 +158,7 @@ class _ResultScreenBodyState extends State<ResultScreenBody> {
                       Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const HomeScreen(),
+                          builder: (context) => const ReviewQuestionScreen(),
                         ),
                       );
                     },

@@ -1,5 +1,6 @@
 import 'package:awsprephub/core/routes/routes.dart';
 import 'package:awsprephub/features/exam/manager/exam_cubit.dart';
+import 'package:awsprephub/features/review_question/screen/ui/review_question_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -25,6 +26,11 @@ class AppRouting {
         return MaterialPageRoute(
           builder: (_) => const ResultScreen(),
           settings: RouteSettings(arguments: arguments),
+        );
+
+      case Routes.reviewQuestionScreen:
+        return MaterialPageRoute(
+          builder: (_) => const ReviewQuestionScreen(),
         );
 
       default:
