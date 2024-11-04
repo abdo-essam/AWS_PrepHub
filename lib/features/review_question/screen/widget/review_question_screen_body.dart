@@ -76,7 +76,431 @@ class ReviewQuestionScreenBody extends StatelessWidget {
                                 ]),
                           ],
                         )),
-                  )
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 10),
+                    child: Container(
+                        width: double.infinity,
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 15, vertical: 20),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Row(
+                              children: [
+                                const Expanded(
+                                  child: Icon(
+                                    Icons.close,
+                                    color: Colors.red,
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 20.w,
+                                ),
+                                const Expanded(
+                                  flex: 20,
+                                  child: Text(
+                                    "Question 1 : What is the capital of India ? Question 1 : What is the capital of India ? Question 1 : What is the capital of India ?",
+                                    style: TextStyle(
+                                        fontSize: 18, color: Colors.black),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            const Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  Text("Correct: ",
+                                      style: TextStyle(
+                                          color: Colors.green,
+                                          fontWeight: FontWeight.bold)),
+                                  Text("New Delhi",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold)),
+                                ]),
+                          ],
+                        )),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 10),
+                    child: Container(
+                        width: double.infinity,
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 15, vertical: 20),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Row(
+                              children: [
+                                const Expanded(
+                                  child: Icon(
+                                    Icons.close,
+                                    color: Colors.red,
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 20.w,
+                                ),
+                                const Expanded(
+                                  flex: 20,
+                                  child: Text(
+                                    "Question 1 : What is the capital of India ? Question 1 : What is the capital of India ? Question 1 : What is the capital of India ?",
+                                    style: TextStyle(
+                                        fontSize: 18, color: Colors.black),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            const Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  Text("Correct: ",
+                                      style: TextStyle(
+                                          color: Colors.green,
+                                          fontWeight: FontWeight.bold)),
+                                  Text("New Delhi",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold)),
+                                ]),
+                          ],
+                        )),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 10),
+                    child: Container(
+                        width: double.infinity,
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 15, vertical: 20),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Row(
+                              children: [
+                                const Expanded(
+                                  child: Icon(
+                                    Icons.close,
+                                    color: Colors.red,
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 20.w,
+                                ),
+                                const Expanded(
+                                  flex: 20,
+                                  child: Text(
+                                    "Question 1 : What is the capital of India ? Question 1 : What is the capital of India ? Question 1 : What is the capital of India ?",
+                                    style: TextStyle(
+                                        fontSize: 18, color: Colors.black),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            const Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  Text("Correct: ",
+                                      style: TextStyle(
+                                          color: Colors.green,
+                                          fontWeight: FontWeight.bold)),
+                                  Text("New Delhi",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold)),
+                                ]),
+                          ],
+                        )),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 10),
+                    child: Container(
+                        width: double.infinity,
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 15, vertical: 20),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Row(
+                              children: [
+                                const Expanded(
+                                  child: Icon(
+                                    Icons.close,
+                                    color: Colors.red,
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 20.w,
+                                ),
+                                const Expanded(
+                                  flex: 20,
+                                  child: Text(
+                                    "Question 1 : What is the capital of India ? Question 1 : What is the capital of India ? Question 1 : What is the capital of India ?",
+                                    style: TextStyle(
+                                        fontSize: 18, color: Colors.black),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            const Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  Text("Correct: ",
+                                      style: TextStyle(
+                                          color: Colors.green,
+                                          fontWeight: FontWeight.bold)),
+                                  Text("New Delhi",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold)),
+                                ]),
+                          ],
+                        )),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 10),
+                    child: Container(
+                        width: double.infinity,
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 15, vertical: 20),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Row(
+                              children: [
+                                const Expanded(
+                                  child: Icon(
+                                    Icons.close,
+                                    color: Colors.red,
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 20.w,
+                                ),
+                                const Expanded(
+                                  flex: 20,
+                                  child: Text(
+                                    "Question 1 : What is the capital of India ? Question 1 : What is the capital of India ? Question 1 : What is the capital of India ?",
+                                    style: TextStyle(
+                                        fontSize: 18, color: Colors.black),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            const Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  Text("Correct: ",
+                                      style: TextStyle(
+                                          color: Colors.green,
+                                          fontWeight: FontWeight.bold)),
+                                  Text("New Delhi",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold)),
+                                ]),
+                          ],
+                        )),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 10),
+                    child: Container(
+                        width: double.infinity,
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 15, vertical: 20),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Row(
+                              children: [
+                                const Expanded(
+                                  child: Icon(
+                                    Icons.close,
+                                    color: Colors.red,
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 20.w,
+                                ),
+                                const Expanded(
+                                  flex: 20,
+                                  child: Text(
+                                    "Question 1 : What is the capital of India ? Question 1 : What is the capital of India ? Question 1 : What is the capital of India ?",
+                                    style: TextStyle(
+                                        fontSize: 18, color: Colors.black),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            const Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  Text("Correct: ",
+                                      style: TextStyle(
+                                          color: Colors.green,
+                                          fontWeight: FontWeight.bold)),
+                                  Text("New Delhi",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold)),
+                                ]),
+                          ],
+                        )),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 10),
+                    child: Container(
+                        width: double.infinity,
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 15, vertical: 20),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Row(
+                              children: [
+                                const Expanded(
+                                  child: Icon(
+                                    Icons.close,
+                                    color: Colors.red,
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 20.w,
+                                ),
+                                const Expanded(
+                                  flex: 20,
+                                  child: Text(
+                                    "Question 1 : What is the capital of India ? Question 1 : What is the capital of India ? Question 1 : What is the capital of India ?",
+                                    style: TextStyle(
+                                        fontSize: 18, color: Colors.black),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            const Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  Text("Correct: ",
+                                      style: TextStyle(
+                                          color: Colors.green,
+                                          fontWeight: FontWeight.bold)),
+                                  Text("New Delhi",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold)),
+                                ]),
+                          ],
+                        )),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 10),
+                    child: Container(
+                        width: double.infinity,
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 15, vertical: 20),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Row(
+                              children: [
+                                const Expanded(
+                                  child: Icon(
+                                    Icons.close,
+                                    color: Colors.red,
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 20.w,
+                                ),
+                                const Expanded(
+                                  flex: 20,
+                                  child: Text(
+                                    "Question 1 : What is the capital of India ? Question 1 : What is the capital of India ? Question 1 : What is the capital of India ?",
+                                    style: TextStyle(
+                                        fontSize: 18, color: Colors.black),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            const Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  Text("Correct: ",
+                                      style: TextStyle(
+                                          color: Colors.green,
+                                          fontWeight: FontWeight.bold)),
+                                  Text("New Delhi",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold)),
+                                ]),
+                          ],
+                        )),
+                  ),
                 ],
               ),
             ),

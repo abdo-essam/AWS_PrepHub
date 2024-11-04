@@ -28,12 +28,40 @@ class HomeScreenBody extends StatelessWidget {
                 SizedBox(
                   width: 10.w,
                 ),
-                Text(
-                  'Hello, Welcome to AWS PrepHub',
-                  style: GoogleFonts.quicksand(
-                    fontSize: 16.0.sp,
-                    color: Colors.white,
-                  ),
+                Row(
+                  children: [
+                    Text(
+                      'Hello,',
+                      style: GoogleFonts.quicksand(
+                        fontSize: 16.0.sp,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                      ' Welcome to AWS ',
+                      style: GoogleFonts.quicksand(
+                        fontSize: 16.0.sp,
+                        color: Colors.white,
+                      ),
+                    ),
+                    Text(
+                      'Prep',
+                      style: GoogleFonts.quicksand(
+                        fontSize: 16.0.sp,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                      'Hub',
+                      style: GoogleFonts.quicksand(
+                        fontSize: 16.0.sp,
+                        color: Colors.deepOrange,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
