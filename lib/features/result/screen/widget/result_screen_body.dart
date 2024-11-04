@@ -27,13 +27,14 @@ class _ResultScreenBodyState extends State<ResultScreenBody> {
 
   @override
   Widget build(BuildContext context) {
-    double percentage = endIndex < 0
-        ? (score / (endIndex + 2)) * 100
+    double percentage = endIndex <= 0
+        ? (score / (endIndex + 1)) * 100
         : (score / (endIndex + 1)) * 100;
+    print("percentage: $percentage score: $score endIndex: $endIndex");
 
     return Scaffold(
       backgroundColor: Colors.black,
-      body: Container(
+      body: SizedBox(
         width: double.infinity,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -45,7 +46,9 @@ class _ResultScreenBodyState extends State<ResultScreenBody> {
             Padding(
               padding: const EdgeInsets.all(24),
               child: Text(
-                '$score out of 10 are correct',
+                endIndex > 0
+                    ? '$score out of ${endIndex + 1} are correct'
+                    : '$score out of ${endIndex}endIndex are correct',
                 style: GoogleFonts.quicksand(
                   textStyle: TextStyle(
                       color: Colors.white,
@@ -120,7 +123,7 @@ class _ResultScreenBodyState extends State<ResultScreenBody> {
                       Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => HomeScreen(),
+                          builder: (context) => const HomeScreen(),
                         ),
                       );
                     },

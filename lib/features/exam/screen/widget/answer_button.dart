@@ -36,11 +36,10 @@ class AnswerButton extends StatelessWidget {
           // check if it is the last question
           if (context.read<ExamCubit>().index ==
               context.read<ExamCubit>().questions.length - 1) {
-            Navigator.of(context).pushNamed(Routes.resultScreen,
-                arguments: {
-                  'score': context.read<ExamCubit>().score,
-                  'endIndex': context.read<ExamCubit>().index,
-                });
+            Navigator.of(context).popAndPushNamed(Routes.resultScreen, arguments: {
+              'score': context.read<ExamCubit>().score,
+              'endIndex': context.read<ExamCubit>().index,
+            });
           }
 
           // go to next question

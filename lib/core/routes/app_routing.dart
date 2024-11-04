@@ -23,10 +23,7 @@ class AppRouting {
 
       case Routes.resultScreen:
         return MaterialPageRoute(
-          builder: (_) => const ResultScreen(
-            index: 0,
-            score: 0,
-          ),
+          builder: (_) => const ResultScreen(),
           settings: RouteSettings(arguments: arguments),
         );
 

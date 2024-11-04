@@ -1,5 +1,6 @@
 import 'package:awsprephub/features/exam/manager/exam_cubit.dart';
 import 'package:awsprephub/features/exam/manager/exam_state.dart';
+import 'package:awsprephub/features/result/screen/ui/result_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -30,6 +31,14 @@ class ExamScreenBlocBuilder extends StatelessWidget {
         }
         if (state is ExamQuestionIndexUpdated) {
           return getQuestionScreen(state.questions);
+        }
+
+        if (state is ExamQuestionLastIndexUpdated) {
+          return const Center(
+            child: CircularProgressIndicator(
+              color: Colors.deepOrange,
+            ),
+          );
         }
 
         return const Text('Something went wrong');

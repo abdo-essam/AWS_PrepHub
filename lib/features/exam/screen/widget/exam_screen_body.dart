@@ -20,23 +20,20 @@ class ExamScreenBody extends StatefulWidget {
 }
 
 class _ExamScreenBodyState extends State<ExamScreenBody> {
-
-
   @override
   void initState() {
     super.initState();
     context.read<ExamCubit>().index = 0;
   }
 
-  void navOnTimeOut() {
-    Navigator.of(context).pushNamed(Routes.resultScreen);
-/*    Navigator.pushReplacement(
-      context,
-      MaterialPageRoute(
-        builder: (context) => ResultScreen(
-            index: context.read<ExamCubit>().index - 1, score: score),
-      ),
-    );*/
+  void navToResult() {
+    Navigator.of(context).popAndPushNamed(
+      Routes.resultScreen,
+      arguments: {
+        'score': context.read<ExamCubit>().score,
+        'endIndex': context.read<ExamCubit>().index,
+      },
+    );
   }
 
   @override
@@ -52,9 +49,16 @@ class _ExamScreenBodyState extends State<ExamScreenBody> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const CountDown(),
+                  CountDown(
+                    quizTime: 1,
+                    timeOut: () {
+                      // if time out then the reminder questions will be incorrect and make the index equal to the last question to calculating the score for overall
+                      context.read<ExamCubit>().index = widget.questions.length;
+                      navToResult();
+                    },
+                  ),
                   Text(
-                    'Q.${context.read<ExamCubit>().index+1}/${widget.questions.length}',
+                    'Q.${context.read<ExamCubit>().index + 1}/${widget.questions.length}',
                     style: GoogleFonts.quicksand(
                       textStyle: TextStyle(
                         fontSize: 14.sp,
@@ -77,18 +81,17 @@ class _ExamScreenBodyState extends State<ExamScreenBody> {
                     height: 20.h,
                   ),
 
-                  // the question
-                  Text(
-                    widget.questions[context.read<ExamCubit>().index]
-                        .questionText,
-                    style: GoogleFonts.quicksand(
-                      textStyle: TextStyle(
-                        fontSize: 14.sp,
-                        color: Colors.white,
-                        fontWeight: FontWeight.w600,
+                    Text(
+                      widget.questions[context.read<ExamCubit>().index]
+                          .questionText,
+                      style: GoogleFonts.quicksand(
+                        textStyle: TextStyle(
+                          fontSize: 14.sp,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w600,
+                        ),
                       ),
                     ),
-                  ),
                   SizedBox(
                     height: 20.h,
                   ),
@@ -166,7 +169,7 @@ class _ExamScreenBodyState extends State<ExamScreenBody> {
                     bool shouldNavigateBack = await showBackAlertDialog(
                         context, 'Do you want to submit the exam ?');
                     if (shouldNavigateBack) {
-                      Navigator.of(context).pushNamed(Routes.resultScreen);
+                      navToResult();
                     }
                   },
                   child: Text(

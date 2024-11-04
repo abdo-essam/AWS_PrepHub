@@ -27,8 +27,12 @@ class ExamCubit extends Cubit<ExamState> {
   }
 
   updateIndex(int currentIndex) async {
-    index = currentIndex + 1;
-    emit(ExamQuestionIndexUpdated(questions: questions));
+    if (currentIndex < questions.length - 1) {
+      index = currentIndex + 1;
+      emit(ExamQuestionIndexUpdated(questions: questions));
+    } else {
+      emit(ExamQuestionLastIndexUpdated());
+    }
   }
 
   increaseScore() {

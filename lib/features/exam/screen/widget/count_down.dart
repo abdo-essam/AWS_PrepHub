@@ -3,7 +3,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_timer_countdown/flutter_timer_countdown.dart';
 
 class CountDown extends StatelessWidget {
-  const CountDown({super.key});
+  final int quizTime;
+  final Function timeOut;
+
+  const CountDown({super.key, required this.quizTime, required this.timeOut});
 
   @override
   Widget build(BuildContext context) {
@@ -34,12 +37,14 @@ class CountDown extends StatelessWidget {
               color: Colors.white,
             ),
             endTime: DateTime.now().add(
-              const Duration(
-                minutes: 5,
+              Duration(
+                minutes: quizTime,
                 seconds: 0,
               ),
             ),
-            onEnd: () {},
+            onEnd: () {
+              timeOut();
+            },
           ),
         ],
       ),

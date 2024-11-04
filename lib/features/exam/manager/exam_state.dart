@@ -19,6 +19,8 @@ class ExamQuestionIndexUpdated extends ExamState {
 
 }
 
+class ExamQuestionLastIndexUpdated extends ExamState {}
+
 class ExamIncreaseScore extends ExamState {}
 
 class ExamGetAllQuestions extends ExamState {
